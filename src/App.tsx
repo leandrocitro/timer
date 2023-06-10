@@ -1,10 +1,15 @@
+import { Button } from "./components/Button";
 
 
-function App() {
+export function App() {
   
   return (
-    <h1>HelloWorld</h1>
+    <>
+      <Button variant ="primary" />
+      <Button variant ="secondary"/>
+      <Button variant ="success"/>
+      <Button variant ="danger"/>
+      <Button />
+    </>
   )
 }
-
-export default App
