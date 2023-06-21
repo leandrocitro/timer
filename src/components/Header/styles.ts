@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
     nav {
         display: flex;
         gap: 0.5rem;
+        
 
         a {
             width: 3rem;
@@ -29,7 +30,7 @@ export const HeaderContainer = styled.header`
 
             &.active {
                 color: ${(props) => props.theme['green-500']};
-                border-bottom: 3px solid transparent ${(props) => props.theme['green-500']};
+                
             }
 
             
