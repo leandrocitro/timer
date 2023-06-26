@@ -9,10 +9,10 @@ export function Home() {
                     <label htmlFor="">Vou trabalhar em</label>
                     <input id="task" />
 
-                    <label htmlFor="">durante</label>
+                    <label htmlFor="">Durante</label>
                     <input type="number" id="minutesAmount" />
 
-                    <span>minutos.</span>
+                    <span>Minutos.</span>
                 </FormContainer>
 
                 <CountDowContainer>
