@@ -1,5 +1,5 @@
-import { Play } from "phosphor-react";
-import { CountDowContainer, FormContainer, HomeContainer, MinutesAmountInput, Separator, StartCountDownButton, TaskInput } from "./styles";
+import { HandPalm, Play } from "phosphor-react";
+import { CountDowContainer, FormContainer, HomeContainer, MinutesAmountInput, Separator, StartCountdownButton, StopCountdownButton, TaskInput } from "./styles";
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod';
@@ -144,13 +144,20 @@ export function Home() {
                     <span>{seconds[1]}</span>
                 </CountDowContainer>
 
-                <StartCountDownButton disabled={isSubmitDisabled} type="submit">
-                    <Play size={24} />
-                    Começar
-                </StartCountDownButton>
+                {activeCycle ? (
+                    <StopCountdownButton type="button">
+                        <HandPalm size={24} />
+                        Interromper
+                    </StopCountdownButton>
+
+                ) : (
+                    <StartCountdownButton disabled={isSubmitDisabled} type="submit">
+                        <Play size={24} />
+                        Começar
+                    </StartCountdownButton>
+
+                )}
             </form>
-
-
         </HomeContainer>
     )
 }
