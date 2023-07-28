@@ -1,4 +1,4 @@
-import { useFormAction } from "react-router-dom";
+import { useForm } from 'react-hook-form';
 import { FormContainer, MinutesAmountInput, TaskInput } from "./styles";
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod';
@@ -19,7 +19,7 @@ const newCycleFormValidationSchema = zod.object({
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
 export function NewCycleForm () {
-    const { register, handleSubmit, watch, reset } = useFormAction<NewCycleFormData>({
+    const { register, handleSubmit, watch, reset } = useForm<NewCycleFormData>({
         resolver: zodResolver(newCycleFormValidationSchema),
         defaultValues: {
             task: '',
